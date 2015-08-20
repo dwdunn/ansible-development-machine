@@ -1,0 +1,9 @@
+---
+
+type: development
+version:
+  etcd: v2.1.1
+  golang: 1.4.2
+  kubernetes: 1.0.1
+  terraform: 0.6.3
+  vagrant: 1.7.4

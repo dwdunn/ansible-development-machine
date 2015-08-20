@@ -1,0 +1,12 @@
+---
+
+- hosts: 127.0.0.1
+  become: yes
+  become_method: sudo
+  connection: local
+  roles:
+    - common
+  vars:
+    project_dir: "{{ lookup('env', 'PWD') }}"
+    username: "{{ lookup('env', 'USER') }}"
+    user_id: "{{ lookup('env', 'UID') }}"

@@ -1,0 +1,20 @@
+---
+
+- file: path=/usr/local/terraform/
+        state=directory
+        owner=root
+        group=root
+        mode=655
+
+- unarchive: src=resources/terraform_{{ version.terraform }}_linux_amd64.zip
+             dest=/usr/local/terraform/
+             copy=yes
+             owner=root
+             group=root
+             mode=755
+
+- copy: src=profile.terraform.sh
+        dest=/etc/profile.d/
+        owner=root
+        group=root
+        mode=644

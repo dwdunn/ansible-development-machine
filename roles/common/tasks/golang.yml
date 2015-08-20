@@ -1,0 +1,13 @@
+---
+
+- unarchive: src=resources/golang.{{ version.golang }}.linux-amd64.tar.gz
+             dest=/usr/local/
+             copy=yes
+             owner=root
+             group=root
+
+- copy: src=profile.golang.sh
+        dest=/etc/profile.d/
+        owner=root
+        group=root
+        mode=644

@@ -1,0 +1,14 @@
+---
+
+- name: install common utilities sometimes missing from base installs
+  apt: name={{ item }} state=latest
+  with_items:
+    - curl
+    - man
+    - npm
+    - nodejs
+    - vim
+
+
+- name: symlink node command to nodejs
+  file: src=/usr/bin/nodejs dest=/usr/bin/node state=link

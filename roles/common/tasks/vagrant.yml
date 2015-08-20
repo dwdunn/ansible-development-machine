@@ -1,0 +1,4 @@
+---
+
+- name: install vagrant
+  apt: deb={{ project_dir }}/roles/common/files/resources/vagrant_{{ version.vagrant }}_x86_64.deb

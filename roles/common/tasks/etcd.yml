@@ -1,0 +1,16 @@
+---
+
+- unarchive: src=resources/etcd-{{ version.etcd }}-linux-amd64.tar.gz
+             dest={{ project_dir }}/roles/common/files/resources/
+             copy=yes
+
+- copy: src=resources/etcd-{{ version.etcd }}-linux-amd64/{{ item }} dest=/usr/local/bin/{{ item }} owner=root group=root mode=755
+  with_items:
+    - etcd
+    - etcdctl
+
+- command: /usr/local/bin/etcd
+  async: 60
+  poll: 0
+
+- command: /usr/local/bin/etcdctl set mykey "{{ etcd_password }}"

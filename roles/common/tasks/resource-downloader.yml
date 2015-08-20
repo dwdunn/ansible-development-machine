@@ -1,0 +1,12 @@
+---
+
+- template: src=resource.yml.j2
+            dest={{ project_dir }}/roles/common/files/resources/resource.yml
+
+- command: docker run --rm -v {{ project_dir }}/roles/common/files/resources:/tmp/resources -e "USER_ID=1000" dwdunn/resource-downloader
+#- docker:
+#    image: dwdunn/resource-downloader
+#    environment:
+#      USER_ID: "{{ user_id }}"
+#    volumes:
+#      ../files/resources:/tmp/resources

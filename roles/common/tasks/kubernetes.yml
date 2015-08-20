@@ -1,0 +1,17 @@
+---
+
+- include: etcd.yml
+- include: golang.yml
+
+- unarchive: src=resources/kubernetes.{{ version.kubernetes }}.tar.gz
+             dest=/usr/local/
+             copy=yes
+             owner=root
+             group=root
+             mode=755
+
+- copy: src=profile.kubernetes.sh
+        dest=/etc/profile.d/
+        owner=root
+        group=root
+        mode=644

@@ -1,0 +1,16 @@
+---
+
+- get_url: url=https://github.com/coreos/etcd/releases/download/{{ version.etcd }}/etcd-{{ version.etcd }}-linux-amd64.tar.gz
+           dest=/tmp/resources/etcd.{{ version.etcd }}-linux-amd64.tar.gz
+
+- get_url: url=https://storage.googleapis.com/golang/go{{ version.golang }}.linux-amd64.tar.gz
+           dest=/tmp/resources/golang.{{ version.golang }}.linux-amd64.tar.gz
+
+- get_url: url=https://github.com/GoogleCloudPlatform/kubernetes/releases/download/v{{ version.kubernetes }}/kubernetes.tar.gz
+           dest=/tmp/resources/kubernetes.{{ version.kubernetes }}.tar.gz
+
+- get_url: url=https://dl.bintray.com/mitchellh/terraform/terraform_{{ version.terraform }}_linux_amd64.zip
+           dest=/tmp/resources/terraform_{{ version.terraform }}_linux_amd64.zip
+
+- get_url: url=https://dl.bintray.com/mitchellh/vagrant/vagrant_{{ version.vagrant }}_x86_64.deb
+           dest=/tmp/resources/vagrant_{{ version.vagrant }}_x86_64.deb

@@ -1,0 +1,22 @@
+---
+
+# Fetch resources and set variables used by system
+- include_vars: secrets.yml
+  tags:
+    - always
+
+# Resource downloader depends on docker
+- include: docker.yml tags=docker
+- include: resource-downloader.yml tags=always
+
+# Download and install programs
+- include: common.yml tags=common
+- include: resource-downloader.yml tags=download
+- include: kubernetes.yml tags=kubernetes
+- include: terraform.yml tags=terraform
+- include: vagrant.yml tags=vagrant
+- include: virtual-machine.yml
+  tags:
+    - vm
+    - virtualbox
+    - vmware
