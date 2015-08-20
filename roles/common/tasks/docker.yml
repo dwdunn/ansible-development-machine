@@ -14,5 +14,12 @@
 - name: install docker
   apt: name=lxc-docker state=latest
 
+- name: install docker-compose
+  copy: src=resources/docker-compose.{{ version.docker_compose }}
+        dest=/usr/local/bin/docker-compose
+        owner=root
+        group=root
+        mode=755
+
 - name: ensure docker is running and starts on bootup
   service: name=docker enabled=yes state=started

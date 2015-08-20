@@ -2,6 +2,7 @@
 
 type: development
 version:
+  docker_compose: 1.4.0
   etcd: v2.1.1
   golang: 1.4.2
   kubernetes: 1.0.1

@@ -1,10 +1,13 @@
 ---
 
+- get_url: url=https://github.com/docker/compose/releases/download/{{ version.docker_compose }}/docker-compose-Linux-x86_64
+           dest=/tmp/resources/docker-compose.{{ version.docker_compose }}
+
 - get_url: url=https://github.com/coreos/etcd/releases/download/{{ version.etcd }}/etcd-{{ version.etcd }}-linux-amd64.tar.gz
            dest=/tmp/resources/etcd.{{ version.etcd }}-linux-amd64.tar.gz
 
 - get_url: url=https://storage.googleapis.com/golang/go{{ version.golang }}.linux-amd64.tar.gz
-           dest=/tmp/resources/golang.{{ version.golang }}.linux-amd64.tar.gz
+           dest=/tmp/resources/golang.{{ version.golang }}.linux-amd64.tLar.gz
 
 - get_url: url=https://github.com/GoogleCloudPlatform/kubernetes/releases/download/v{{ version.kubernetes }}/kubernetes.tar.gz
            dest=/tmp/resources/kubernetes.{{ version.kubernetes }}.tar.gz

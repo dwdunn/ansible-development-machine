@@ -11,6 +11,7 @@
 
 # Download and install programs
 - include: common.yml tags=common
+- include: docker.yml tags=docker # For docker-compose
 - include: resource-downloader.yml tags=download
 - include: kubernetes.yml tags=kubernetes
 - include: terraform.yml tags=terraform
