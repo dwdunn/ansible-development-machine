@@ -11,8 +11,10 @@
 
 # Download and install programs
 - include: common.yml tags=common
+- include: android.yml tags=android
 - include: docker-compose.yml tags=docker
 - include: resource-downloader.yml tags=download
+- include: java.yml tags=java
 - include: kubernetes.yml tags=kubernetes
 - include: terraform.yml tags=terraform
 - include: vagrant.yml tags=vagrant

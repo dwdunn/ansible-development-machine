@@ -1,0 +1,23 @@
+---
+
+- file: path=/usr/local/java/
+        state=directory
+        owner=root
+        group=root
+        mode=655
+
+- unarchive: src=resources/jdk-7u{{ release.java.7 }}-linux-x64.tar.gz
+             dest=/usr/local/java/
+             copy=yes
+             owner=root
+             group=root
+
+- file: src=/usr/local/java/jdk1.7.0_{{ release.java.7 }} dest=/usr/local/java/jdk7 state=link
+
+- unarchive: src=resources/jdk-8u{{ release.java.8 }}-linux-x64.tar.gz
+             dest=/usr/local/java/
+             copy=yes
+             owner=root
+             group=root
+
+- file: src=/usr/local/java/jdk1.8.0_{{ release.java.8 }} dest=/usr/local/java/jdk8 state=link

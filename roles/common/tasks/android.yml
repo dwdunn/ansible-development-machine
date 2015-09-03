@@ -1,0 +1,11 @@
+- unarchive: src=resources/android-studio-ide-{{ build.android_studio }}-linux.zip
+             dest=/usr/local/
+             copy=yes
+             owner=root
+             group=root
+
+- copy: src=profile.android-studio.sh
+        dest=/etc/profile.d/
+        owner=root
+        group=root
+        mode=644

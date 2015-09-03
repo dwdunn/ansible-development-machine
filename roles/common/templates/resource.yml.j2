@@ -1,5 +1,8 @@
 ---
 
+- get_url: url=https://dl.google.com/dl/android/studio/ide-zips/{{ version.android_studio }}/android-studio-ide-{{ build.android_studio }}-linux.zip
+           dest=/tmp/resources/android-studio-ide-{{ build.android_studio }}-linux.zip
+
 - get_url: url=https://github.com/docker/compose/releases/download/{{ version.docker_compose }}/docker-compose-Linux-x86_64
            dest=/tmp/resources/docker-compose.{{ version.docker_compose }}
 
