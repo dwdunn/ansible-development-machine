@@ -16,6 +16,7 @@
 - include: resource-downloader.yml tags=download
 - include: java.yml tags=java
 - include: kubernetes.yml tags=kubernetes
+- include: openshift.yml tags=openshift
 - include: terraform.yml tags=terraform
 - include: vagrant.yml tags=vagrant
 - include: virtual-machine.yml

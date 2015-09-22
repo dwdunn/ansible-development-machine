@@ -1,0 +1,34 @@
+---
+
+- file: path=/usr/local/openshift/
+        state=directory
+        owner=root
+        group=root
+        mode=655
+
+- file: path=/var/lib/openshift/
+        state=directory
+        owner=root
+        group=root
+        mode=655
+
+- file: path=/var/lib/openshift/openshift.local.volumes/
+        state=directory
+        owner=root
+        group=root
+        mode=655
+
+- command: tar -C /usr/local/openshift --wildcards -xvf {{ project_dir}}/roles/common/files/resources/openshift-origin-v1.0.6-2695cdc-linux-amd64.tar.gz './*'
+
+- file: path=/usr/local/openshift/
+        state=directory
+        recurse=yes
+        owner=root
+        group=root
+        mode=655
+
+- copy: src=profile.openshift.sh
+        dest=/etc/profile.d/
+        owner=root
+        group=root
+        mode=644

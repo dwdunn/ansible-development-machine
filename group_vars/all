@@ -7,11 +7,13 @@ release:
   java:
     7: 79
     8: 60
+  openshift_origin: 2695cdc
 version:
   android_studio: 1.3.1.0
   docker_compose: 1.4.0
   etcd: v2.1.1
   golang: 1.4.2
   kubernetes: 1.0.1
+  openshift_origin: 1.0.6
   terraform: 0.6.3
   vagrant: 1.7.4
