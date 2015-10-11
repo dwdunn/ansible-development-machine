@@ -1,0 +1,14 @@
+---
+
+- unarchive: src=resources/rclone-v{{ version.rclone }}-linux-amd64.zip
+             dest=/tmp/
+             copy=yes
+             owner=root
+             group=root
+             mode=755
+
+- copy: src=/tmp/rclone-v{{ version.rclone }}-linux-amd64/rclone
+        dest=/usr/local/bin/
+        owner=root
+        group=root
+        mode=755

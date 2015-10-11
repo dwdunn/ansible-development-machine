@@ -17,6 +17,7 @@
 - include: java.yml tags=java
 - include: kubernetes.yml tags=kubernetes
 - include: openshift.yml tags=openshift
+- include: rclone.yml tags=rclone
 - include: terraform.yml tags=terraform
 - include: vagrant.yml tags=vagrant
 - include: virtual-machine.yml

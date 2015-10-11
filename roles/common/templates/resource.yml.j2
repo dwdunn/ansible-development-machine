@@ -18,6 +18,9 @@
 - get_url: url=https://github.com/openshift/origin/releases/download/v{{ version.openshift_origin }}/openshift-origin-v{{ version.openshift_origin }}-{{ release.openshift_origin }}-linux-amd64.tar.gz
            dest=/tmp/resources/openshift-origin-v{{ version.openshift_origin }}-{{ release.openshift_origin }}-linux-amd64.tar.gz
 
+- get_url: url=http://downloads.rclone.org/rclone-v{{ version.rclone }}-linux-amd64.zip
+           dest=/tmp/resources/rclone-v{{ version.rclone }}-linux-amd64.zip
+
 - get_url: url=https://dl.bintray.com/mitchellh/terraform/terraform_{{ version.terraform }}_linux_amd64.zip
            dest=/tmp/resources/terraform_{{ version.terraform }}_linux_amd64.zip
 
