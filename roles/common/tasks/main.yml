@@ -15,7 +15,8 @@
 - include: docker-compose.yml tags=docker
 - include: resource-downloader.yml tags=download
 - include: java.yml tags=java
-- include: kubernetes.yml tags=kubernetes
+# Openshift installs kubernetes
+# - include: kubernetes.yml tags=kubernetes
 - include: openshift.yml tags=openshift
 - include: rclone.yml tags=rclone
 - include: terraform.yml tags=terraform
